@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Manage Results</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    background:#f2f2f2;
+}
+
+.container{
+    width:95%;
+    background:white;
+    margin:auto;
+    margin-top:30px;
+    padding:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:darkblue;
+    color:white;
+    padding:10px;
+}
+
+td{
+    border:1px solid gray;
+    padding:10px;
+    text-align:center;
+}
+
+a{
+    text-decoration:none;
+    color:darkblue;
+    font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Admin Result Management</h2>
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Student Name</th>
+<th>Exam Number</th>
+<th>Subject</th>
+<th>Grade</th>
+<th>Actions</th>
+</tr>
+
+{% for row in results %}
+
+<tr>
+
+<td>{{ row[0] }}</td>
+<td>{{ row[1] }}</td>
+<td>{{ row[2] }}</td>
+<td>{{ row[3] }}</td>
+<td>{{ row[4] }}</td>
+
+<td>
+
+<a href="/edit/{{ row[0] }}">
+Edit
+</a>
+
+|
+
+<a href="/delete/{{ row[0] }}">
+Delete
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+</body>
+</html>

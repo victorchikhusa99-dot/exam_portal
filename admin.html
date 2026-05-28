@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Admin Upload</title>
+
+<style>
+
+body{
+    background:#f2f2f2;
+    font-family:Arial;
+}
+
+.container{
+    width:90%;
+    max-width:500px;
+    background:white;
+    margin:auto;
+    margin-top:40px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0px 0px 10px gray;
+}
+
+h2{
+    text-align:center;
+    color:darkblue;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin-top:10px;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    margin-top:15px;
+    background:darkblue;
+    color:white;
+    border:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Admin Result Upload</h2>
+
+<form method="POST">
+
+<input type="text"
+name="exam_number"
+placeholder="Exam Number"
+required>
+
+<input type="text"
+name="subject"
+placeholder="Subject"
+required>
+
+<input type="text"
+name="grade"
+placeholder="Grade"
+required>
+
+<button type="submit">
+Upload Result
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

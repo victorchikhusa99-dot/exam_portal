@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Results</title>
+
+<style>
+
+body{
+    background:#f2f2f2;
+    font-family:Arial;
+}
+
+.container{
+    width:90%;
+    max-width:700px;
+    background:white;
+    margin:auto;
+    margin-top:40px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0px 0px 10px gray;
+}
+
+h2{
+    text-align:center;
+    color:darkblue;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+th{
+    background:darkblue;
+    color:white;
+    padding:10px;
+}
+
+td{
+    border:1px solid gray;
+    padding:10px;
+    text-align:center;
+}
+
+tr:nth-child(even){
+    background:#eeeeee;
+}
+
+.footer{
+    text-align:center;
+    margin-top:20px;
+    color:gray;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>MANEB Examination Results</h2>
+
+<p>
+<b>Exam Number:</b>
+{{ exam_number }}
+</p>
+
+<table>
+
+<tr>
+<th>Subject</th>
+<th>Grade</th>
+
+</tr>
+
+{% for row in results %}
+
+<tr>
+<td>{{ row[1] }}</td>
+<td>{{ row[2] }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+<div class="footer">
+© Examination Portal
+</div>
+
+</div>
+
+</body>
+</html>
